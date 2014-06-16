@@ -1,4 +1,10 @@
-yii2-refiner-testapp
-====================
+Test application for yii2-refiner
+=================================
 
-yii2-refiner test application
+- copy `composer.phar` to project directory
+- run `php composer.phar install` to install requited packages
+- copy `cp tests/config/main-local.php.example tests/config/main-local.php`
+- edit `tests/config/main-local.php`
+- change directory to tests and run `php yii migrate`
+- run `/vendor/bin/codecept build` to prepare tests
+- run `/vendor/bin/codecept run` to run tests

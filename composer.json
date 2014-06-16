@@ -1,0 +1,25 @@
+{
+    "name": "pahanini/yii2-refiner-testapp",
+    "description": "Test application for pahanini/yii2-refiner",
+    "homepage": "https://github.com/pahanini/yii2-refiner-testapp",
+    "type": "yii2-extension",
+    "minimum-stability": "dev",
+    "license": "BSD-3-Clause",
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "codeception/codeception": " 1.8.*@dev",
+        "codeception/specify": " *",
+        "codeception/verify": " *"
+    },
+    "authors": [
+        {
+            "name": "Pavel Tetyaev",
+            "email": "pahanini@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "pahanini\\refiner\\": ""
+        }
+    }
+}

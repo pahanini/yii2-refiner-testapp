@@ -1,0 +1,48 @@
+<?php
+return [
+    [
+        'id' => 1,
+        'name' => 'Product 1',
+        'price' => 100,
+        'weight' => 20,
+        'has_discount' => 1,
+        'category_id' => 100,
+        'balance' => 1,
+    ],
+    [
+        'id' => 2,
+        'name' => 'Product 2',
+        'price' => 200,
+        'weight' => 30,
+        'has_discount' => 1,
+        'category_id' => 100,
+        'balance' => 2,
+    ],
+    [
+        'id' => 3,
+        'name' => 'Product 3',
+        'price' => 300,
+        'weight' => 40,
+        'has_discount' => 0,
+        'category_id' => 200,
+        'balance' => 0,
+    ],
+    [
+        'id' => 4,
+        'name' => 'Product 4',
+        'price' => 400,
+        'weight' => 50,
+        'has_discount' => 0,
+        'category_id' => 200,
+        'balance' => 3,
+    ],
+    [
+        'id' => 5,
+        'name' => 'Bad product 5',
+        'price' => 500,
+        'weight' => 60,
+        'has_discount' => 0,
+        'category_id' => 300,
+        'balance' => 5,
+    ],
+];
