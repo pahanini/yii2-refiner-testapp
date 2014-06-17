@@ -83,7 +83,7 @@ class SetTest extends DbTestCase
                     $this->set->getRefiner('price')->getValues()
                 );
                 $this->assertEquals(
-                    [],
+                    ['Product'],
                     $this->set->getRefiner('name')->getValues()
                 );
             }
