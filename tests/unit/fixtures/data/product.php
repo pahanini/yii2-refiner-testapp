@@ -41,7 +41,7 @@ return [
         'name' => 'Bad product 5',
         'price' => 500,
         'weight' => 60,
-        'has_discount' => 0,
+        'has_discount' => 1,
         'category_id' => 300,
         'balance' => 5,
     ],

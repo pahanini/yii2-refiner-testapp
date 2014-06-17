@@ -36,6 +36,10 @@ class SetTest extends DbTestCase
                 ],
                 'category_id' => [
                     'class' => 'pahanini\refiner\db\Count'
+                ],
+                'has_discount' => [
+                    'class' => 'pahanini\refiner\db\Checkbox',
+                    'valueFilter' => 'has_discount = 1',
                 ]
             ]
         ]);
@@ -51,6 +55,12 @@ class SetTest extends DbTestCase
                         'active' => ['min' => 100, 'max' => 500],
                     ],
                     $this->set->getRefiner('price')->getValues()
+                );
+                $this->assertEquals(
+                    [
+                        'all' => 3, 'active' => 3
+                    ],
+                    $this->set->getRefiner('has_discount')->getValues()
                 );
                 $this->assertEquals(
                     [],
@@ -81,6 +91,12 @@ class SetTest extends DbTestCase
                         'active' => ['min' => 100, 'max' => 400],
                     ],
                     $this->set->getRefiner('price')->getValues()
+                );
+                $this->assertEquals(
+                    [
+                        'all' => 3, 'active' => 1
+                    ],
+                    $this->set->getRefiner('has_discount')->getValues()
                 );
                 $this->assertEquals(
                     ['Product'],
