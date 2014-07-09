@@ -21,8 +21,14 @@ class SetTest extends DbTestCase
         ];
     }
 
+
     public function testAll()
     {
+        $this->set = new Set([]);
+        $this->specify("correct work with empty values", function() {
+            $this->assertEquals([], $this->set->getRefiners());
+        });
+
         $baseQuery = Product::find()->andWhere("balance > 0");
         $this->set = new Set([
             'baseQuery' => clone $baseQuery,
