@@ -46,7 +46,7 @@ class SetTest extends DbTestCase
                 'has_discount' => [
                     'class' => 'pahanini\refiner\db\Checkbox',
                     'valueFilter' => 'has_discount = 1',
-                ]
+                ],
             ]
         ]);
 
@@ -85,7 +85,7 @@ class SetTest extends DbTestCase
 
         $this->set->setBaseQuery(clone $baseQuery);
         $_GET['name'] = ['Product'];
-        $_GET['price'] = ['max' => 400, 'min' => 200];
+        $_GET['price'] = '200,400';
         $this->specify(
             "check refines 2",
             function () {
