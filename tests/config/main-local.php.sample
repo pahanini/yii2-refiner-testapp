@@ -10,5 +10,9 @@ return [
 			'password' => 'postgres',
 			'charset' => 'utf8',
 		],
+
+		'cache' => [
+			'class' => 'yii\caching\MemCache',
+		]
 	],
 ];
