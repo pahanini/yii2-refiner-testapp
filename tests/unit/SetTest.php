@@ -34,6 +34,7 @@ class SetTest extends DbTestCase
         $baseQuery = Product::find()->andWhere("balance > 0");
         $this->set = new Set([
             'baseQuery' => clone $baseQuery,
+            'enableCache' => false,
             'refiners' => [
                 'price' => [
                     'paramType' => 'int',
@@ -161,10 +162,13 @@ class SetTest extends DbTestCase
                 $result2 = $this->set->getRefinerValues();
                 $this->assertEquals($result1, $result2);
                 $this->assertFalse(Yii::$app->db->isActive);
+
+                $baseQuery = Product::find();
+                $this->set->setBaseQuery($baseQuery);
+                $result3 = $this->set->getRefinerValues();
+                $this->assertNotEquals($result1, $result3);
+                $this->assertTrue(Yii::$app->db->isActive);
         });
-
-
-
 
     }
 }
