@@ -6,6 +6,7 @@
     "minimum-stability": "dev",
     "license": "BSD-3-Clause",
     "require-dev": {
+		"ext-memcache": "*",
         "yiisoft/yii2-codeception": "*",
         "codeception/codeception": " 1.8.*@dev",
         "codeception/specify": " *",
